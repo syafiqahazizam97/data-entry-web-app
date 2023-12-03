@@ -1,0 +1,59 @@
+body {
+    padding: 50px;
+}
+
+.table-container {
+    width: 100%;
+    margin: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+td,
+th {
+    border: 2px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.btn{
+
+    background-color:rgb(8, 143, 143);
+}
+
+.button-link{
+    text-decoration: none;
+    color: white;
+}
+
+input{
+    border: 1px solid #ccc; 
+    height: 40px;
+    padding: 10px;
+}
+
+.search-container
+{
+    padding-bottom: 20px;
+    display: flex;
+}
+
+.search-btn{
+    height: 40px;
+    width: 40px;
+    border: none;
+    background-color:rgb(8, 143, 143);
+}
+
+
+.table-header
+{
+    display: flex;
+    width: 100%;
+    
+}
+

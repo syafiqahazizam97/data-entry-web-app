@@ -1,0 +1,31 @@
+.flex {
+    display: flex;
+    gap: 30px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.col-25 {
+    float: left;
+    width: 15%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 70%;
+    margin-top: 6px;
+}
+p{
+    font-style: italic;
+}
+
+.button{
+    margin: auto;
+    text-align: center;
+}
+.btn{
+    color: white ;
+}

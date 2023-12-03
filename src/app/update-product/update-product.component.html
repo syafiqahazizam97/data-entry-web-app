@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="update-product.component.css">
+
+
+<div class ="container">
+    <div class="button-container">
+        <h2>Update Product</h2>
+        <p><button class="btn">
+            <a class="button-link" routerLink ="/products" routerLinkActive="active">Back to listing</a>
+        </button></p>
+        <app-form [projects]="projects" (onSubmit)="onSubmit($event)"></app-form>
+        
+    </div>
+   

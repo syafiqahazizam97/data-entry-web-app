@@ -1,0 +1,58 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<link rel="stylesheet" href="project-list.component.css">
+
+<div class="container">
+    <div class="button-container">
+        <h2>Products List</h2>
+
+    </div>
+    <div class="table-container">
+        <div class="table-header">
+            <div class="search-container">
+                <form [formGroup]="searchForm" (ngSubmit)="search()">
+                    <input type="text" formControlName="search" placeholder="Search Products" />
+                    <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+
+            <p style="margin-left: auto;"><button class="btn" >
+                    <a class="button-link" routerLink="/create-product" routerLinkActive="active">Add New Product</a>
+            </button></p>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Brand</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let project of searchedProject.length ? searchedProject : projects">
+                    <td> {{ project.id }}</td>
+                    <td> {{project.code}}</td>
+                    <td> {{project.name}}</td>
+                    <td> {{project.category}}</td>
+                    <td> {{project.brand}}</td>
+                    <td> {{project.type}}</td>
+                    <td> {{project.description}}</td>
+                    <td style="text-align: center;">
+                        <i class="fas fa-edit" (click)="updateProject(project.code)"></i>
+                        <i class="fas fa-trash-alt" style="padding-left: 15px;" (click)="deleteProjects(project.id)">
+                        </i>
+
+                    </td>
+            </tbody>
+
+        </table>
+
+
+    </div>
+</div>
